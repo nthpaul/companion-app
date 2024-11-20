@@ -37,6 +37,17 @@ export const useChat = () => {
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error) {
       console.error("Chat error:", error);
+      // Add error message to the chat
+      const errorMessage = {
+        id: (Date.now() + 1).toString(),
+        text: "I apologize, but I'm having trouble connecting. Please try again.",
+        isUser: false,
+        timestamp: new Date().toLocaleTimeString([], {
+          hour: "numeric",
+          minute: "2-digit",
+        }),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
