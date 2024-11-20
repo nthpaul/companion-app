@@ -28,7 +28,7 @@ const getChatResponse = async (
         "You are a compassionate AI therapist. Respond with empathy and understanding, while helping users explore their thoughts and feelings. Keep responses concise but meaningful.",
     });
 
-    return response.content[0];
+    return response.content[0]?.text;
   } catch (error) {
     console.error("Claude API error:", error);
     throw error;
