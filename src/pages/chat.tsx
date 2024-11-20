@@ -37,7 +37,7 @@ export default function ChatScreen() {
       >
         {!item.isUser && (
           <View className="flex-row items-center mb-1 ml-1">
-            <View className="w-6 h-6 rounded-full bg-violet-100 items-center justify-center">
+            <View className="w-6 h-6 rounded-full bg-emerald-100 items-center justify-center">
               <Feather name="smile" size={14} color="#8B5CF6" />
             </View>
             <Text className="text-xs text-zinc-400 ml-2">Claude</Text>
@@ -48,7 +48,7 @@ export default function ChatScreen() {
           p-3.5 rounded-2xl
           ${
             item.isUser
-              ? "bg-violet-600 rounded-tr-none"
+              ? "bg-emerald-600 rounded-tr-none"
               : "bg-white rounded-tl-none shadow-sm border border-zinc-100"
           }
         `}
@@ -74,7 +74,7 @@ export default function ChatScreen() {
 
   const TypingIndicator = () => (
     <View className="flex-row items-center space-x-1 ml-1 mb-3">
-      <View className="w-6 h-6 rounded-full bg-violet-100 items-center justify-center mb-1">
+      <View className="w-6 h-6 rounded-full bg-emerald-100 items-center justify-center mb-1">
         <ActivityIndicator size="small" color="#8B5CF6" />
       </View>
       <Text className="text-xs text-zinc-400">Claude is typing...</Text>
@@ -118,7 +118,7 @@ export default function ChatScreen() {
               !inputText.trim() || isLoading ? "opacity-40" : ""
             }`}
           >
-            <Feather name="send" size={22} color="#8B5CF6" />
+            <Feather name="send" size={22} color="#358860" />
           </TouchableOpacity>
         </View>
       </View>
